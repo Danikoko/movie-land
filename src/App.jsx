@@ -21,7 +21,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    movies?.length === 0
+    !!movies === false || movies?.length === 0
     ?
     document.title = 'Home - MovieLand'
     :
