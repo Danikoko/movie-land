@@ -20,6 +20,14 @@ const App = () => {
     setSearchCount(prevSearchCount => prevSearchCount + 1);
   }
 
+  useEffect(() => {
+    movies?.length === 0
+    ?
+    document.title = 'Home - MovieLand'
+    :
+    document.title = `${movies?.length} movie${movies?.length >= 2 ? 's' : '' } found - MovieLand`;
+  }, [movies]);
+
   return (
     <div className="app">
       <h1>MovieLand</h1>
